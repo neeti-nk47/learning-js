@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning
-    </title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <title>Expense Tracker</title>
 </head>
 <body>
-    <H1>Hello World</H1>
-    <button id="clickme">OK</button>
+  <header class="container card bg-primary text-white p-4 mb-3">
+    <div class="card-body row col-md-6">
+      <h1 id="header-title">Expense Tracker</h1>    
+    </div>
+  </header>
 
-    <script src="main.js"></script>
+  <div class="container card ">
+   <div id="main" class=" card-body">
+    <h2 class="title">Add Expenses</h2>
+    <form class="form-inline mb-3">
+      <input type="number" class="form-control mr-2" id="amount" placeholder="Expense Amount">
+      <input type="text" class="form-control mr-2" id="desc" placeholder="Description">
+      <select name="category" class="form-control mr-2" id="category">
+        <option value="" disabled selected>Category</option>
+        <option value="fuel">Fuel</option>
+        <option value="grocery">Grocery</option>
+        <option value="books">Books</option>
+        <option value="foods">Foods</option>
+      </select>
+      <button class="btn btn-dark" onclick="addItem() ; return false;" >Add Expense</button>
+    </form>
+    
+    <h2 class="title">List of Expenses</h2>
+    <div>
+    <ul id="items" class="list-group">
+      <!---li class='list-group-item'>2 - Category - Description<button class= 'btn btn-danger btn-sm'>Delete Expense</button><button class='btn btn-primary btn-sm'>Edit Expense</button></li--->
+      
+    </ul>
+    </div>
+   </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
